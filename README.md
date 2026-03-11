@@ -130,7 +130,7 @@ The frontend communicates with a backend API. Ensure the backend server is runni
 Create a `.env` file in the frontend root:
 
 ```env
-VITE_API=api
+VITE_API=http://localhost:3000/api
 
 VITE_CLOUDINARY = api_for_cloudinary
 
