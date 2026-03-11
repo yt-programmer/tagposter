@@ -1,6 +1,14 @@
 import React, { use, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, Filter, Grid, List } from "lucide-react";
+import {
+  AArrowDown,
+  ArrowDown,
+  ArrowLeft,
+  ArrowRight,
+  Filter,
+  Grid,
+  List,
+} from "lucide-react";
 import useGetProducts from "../hooks/useGetProducts";
 import Loading from "../components/Loading";
 import Error from "../components/Error";
@@ -250,12 +258,13 @@ const ProductsPage = () => {
         >
           <div className="bg-stone-800 rounded-3xl p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Can't find what you're looking for?
+              تصاميم حسب الطلب
             </h3>
-            <p className="text-stone-400 mb-8 max-w-xl mx-auto">
-              We offer custom designs! Contact us through Instagram or WhatsApp
-              to discuss your custom car frame requirements.
+            <p className="text-stone-400 mb-3 max-w-xl mx-auto">
+              نقدم تصاميم حسب الطلب! تواصلوا معنا عبر إنستغرام أو واتساب لمناقشة
+              متطلباتكم الخاصة بالإطارات.
             </p>
+            <ArrowDown className="flex text-stone-400 justify-center w-full mb-3 " />
 
             <div className="flex md:flex-row flex-col justify-center items-center gap-4">
               <input
