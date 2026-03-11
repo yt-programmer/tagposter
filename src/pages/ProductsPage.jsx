@@ -225,7 +225,8 @@ const ProductsPage = () => {
         >
           <button
             onClick={handlePreviousPage}
-            className="inline-flex items-center gap-2 px-5 py-3 bg-stone-800 hover:bg-stone-700 text-white font-medium rounded-xl transition shadow-lg shadow-stone-800/40"
+            disabled={page === 1}
+            className="inline-flex disabled:cursor-not-allowed disabled:opacity-50 items-center gap-2 px-5 py-3 bg-stone-800 hover:bg-stone-700 text-white font-medium rounded-xl transition shadow-lg shadow-stone-800/40"
           >
             <ArrowLeft className="w-5 h-5" />
           </button>
@@ -233,8 +234,9 @@ const ProductsPage = () => {
             {page}
           </span>
           <button
+            disabled={!products || products.length !== 10}
             onClick={handleNextPage}
-            className="inline-flex items-center gap-2 px-5 py-3 bg-stone-800 hover:bg-stone-700 text-white font-medium rounded-xl transition shadow-lg shadow-stone-800/40"
+            className="inline-flex disabled:cursor-not-allowed disabled:opacity-50 items-center gap-2 px-5 py-3 bg-stone-800 hover:bg-stone-700 text-white font-medium rounded-xl transition shadow-lg shadow-stone-800/40"
           >
             <ArrowRight className="w-5 h-5" />
           </button>
