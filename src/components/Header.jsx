@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Instagram, MessageCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import { HashLink } from "react-router-hash-link";
 const Header = () => {
   const [open, setOpen] = useState(false);
 
@@ -28,24 +28,26 @@ const Header = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex gap-10 font-medium">
-            <a
-              href="/#about"
-              className="text-stone-300 hover:text-white transition"
+            <HashLink
+              smooth
+              to="/#about"
+              className="text-white hover:text-stone-400 transition-colors duration-300"
             >
               About
-            </a>
-            <a
-              href="/products"
-              className="text-stone-300 hover:text-white transition"
+            </HashLink>
+            <Link
+              to="/products"
+              className="text-white hover:text-stone-400 transition-colors duration-300"
             >
               Products
-            </a>
-            <a
-              href="/#contact"
-              className="text-stone-300 hover:text-white transition"
+            </Link>
+            <HashLink
+              smooth
+              to="/#contact"
+              className="text-white hover:text-stone-400 transition-colors duration-300"
             >
               Contact
-            </a>
+            </HashLink>
           </nav>
 
           {/* Desktop Social */}
@@ -98,27 +100,29 @@ const Header = () => {
               </div>
 
               <div className="flex flex-col gap-8 mt-12 text-lg font-medium">
-                <a
+                <HashLink
+                  smooth
                   onClick={() => setOpen(false)}
-                  href="#about"
+                  to="/#about"
                   className="text-white hover:text-stone-400"
                 >
                   About
-                </a>
-                <a
+                </HashLink>
+                <Link
+                  to="/products"
                   onClick={() => setOpen(false)}
-                  href="#products"
                   className="text-white hover:text-stone-400"
                 >
                   Products
-                </a>
-                <a
+                </Link>
+                <HashLink
+                  smooth
                   onClick={() => setOpen(false)}
-                  href="#contact"
+                  to="/#contact"
                   className="text-white hover:text-stone-400"
                 >
                   Contact
-                </a>
+                </HashLink>
               </div>
             </motion.div>
           </>

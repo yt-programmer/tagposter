@@ -117,7 +117,7 @@ const ProductsPage = () => {
             </button>
           </div>
 
-          <div className=" flex gap-2 bg-stone-800 py-3 px-6 rounded-full">
+          <div className=" flex gap-2 flex-wrap bg-stone-800 md:py-3 py-2 px-4 md:px-6 rounded-full">
             {categories.map((category, index) => (
               <button
                 key={index}
@@ -255,13 +255,13 @@ const ProductsPage = () => {
               to discuss your custom car frame requirements.
             </p>
 
-            <div className="flex justify-center items-center gap-4">
+            <div className="flex md:flex-row flex-col justify-center items-center gap-4">
               <input
                 type="file"
                 accept="image/*"
                 name="image"
                 id="image"
-                className="text-white px-5 py-2 bg-stone-900 rounded-2xl flex justify-center"
+                className="text-white px-5 py-2 w-full md:w-fit bg-stone-900 rounded-2xl flex justify-center"
                 required
                 onChange={handleImageChange}
               />
